@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Outfit Suggester</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ Weather Outfit Suggester</h1>
+            <p>Get personalized outfit recommendations based on weather</p>
+        </header>
+
+        <main>
+            <!-- Location Input Section -->
+            <section class="location-section">
+                <div class="location-input-group">
+                    <input 
+                        type="text" 
+                        id="locationInput" 
+                        placeholder="Enter a city name..." 
+                        class="location-input"
+                    >
+                    <button id="searchBtn" class="btn btn-primary">Search</button>
+                    <button id="getCurrentLocationBtn" class="btn btn-secondary">📍 Use My Location</button>
+                </div>
+                <div id="loadingSpinner" class="loading-spinner hidden"></div>
+                <div id="errorMessage" class="error-message hidden"></div>
+            </section>
+
+            <!-- Weather Display Section -->
+            <section id="weatherSection" class="weather-section hidden">
+                <div class="weather-info">
+                    <div class="location-header">
+                        <h2 id="locationName"></h2>
+                        <p id="currentDate"></p>
+                    </div>
+
+                    <div class="weather-details">
+                        <div class="weather-main">
+                            <div class="temperature">
+                                <span id="temperature"></span>°C
+                            </div>
+                            <div class="weather-desc">
+                                <p id="weatherDescription"></p>
+                                <p id="feelsLike"></p>
+                            </div>
+                        </div>
+
+                        <div class="weather-stats">
+                            <div class="stat">
+                                <span class="stat-label">💧 Humidity</span>
+                                <span id="humidity" class="stat-value"></span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">💨 Wind Speed</span>
+                                <span id="windSpeed" class="stat-value"></span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">🌡️ Feels Like</span>
+                                <span id="feelsLikeTemp" class="stat-value"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outfit Suggestion Section -->
+                <section class="outfit-suggestion">
+                    <h3>👕 What You Should Wear Today</h3>
+                    <div id="outfitList" class="outfit-list"></div>
+                </section>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by P MAGUGU</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
