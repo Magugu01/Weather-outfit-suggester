@@ -9,8 +9,13 @@
 <body>
     <div class="container">
         <header>
-            <h1>🌤️ Weather Outfit Suggester</h1>
-            <p>Get personalized outfit recommendations based on weather</p>
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>🌤️ Weather Outfit Suggester</h1>
+                    <p>Get personalized outfit recommendations based on weather</p>
+                </div>
+                <button id="darkModeToggle" class="btn btn-icon" title="Toggle Dark Mode">🌙</button>
+            </div>
         </header>
 
         <main>
@@ -25,6 +30,16 @@
                     >
                     <button id="searchBtn" class="btn btn-primary">Search</button>
                     <button id="getCurrentLocationBtn" class="btn btn-secondary">📍 Use My Location</button>
+                    <button id="voiceInputBtn" class="btn btn-secondary" title="Voice Input">🎤</button>
+                    <button id="voiceOutputBtn" class="btn btn-secondary" title="Voice Output">🔊</button>
+                </div>
+                <div id="voiceStatus" class="voice-status hidden"></div>
+                <div id="recentSearches" class="recent-searches hidden">
+                    <div class="recent-header">
+                        <span>Recent Searches</span>
+                        <button id="clearRecentBtn" class="btn btn-small">Clear</button>
+                    </div>
+                    <div id="recentList" class="recent-list"></div>
                 </div>
                 <div id="loadingSpinner" class="loading-spinner hidden"></div>
                 <div id="errorMessage" class="error-message hidden"></div>
@@ -79,6 +94,8 @@
         </footer>
     </div>
 
+    <script src="config.js"></script>
     <script src="script.js"></script>
+    
 </body>
 </html>
